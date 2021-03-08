@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
 router.post('/', (req, res) => {
     const data = req.body;
     const newPhone = Phone.create(data);
-    res.status(201).send({message: `${newPhone.brand} successfully added to our collection.`});
+    res.status(201).send(newPhone);
     
 });
 
